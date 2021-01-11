@@ -5,11 +5,6 @@ on:
     branches:
       - gm/docs
 
-
-defaults:
-  run:
-    working-directory: scripts
-
 jobs:
   deploy:
     runs-on: ubuntu-18.04
@@ -32,9 +27,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        working-directory: ./docs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./docs/public
