@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "/truce"
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true
