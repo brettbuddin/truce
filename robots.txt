@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: /truce/sitemap.xml
+Sitemap: georgemac.github.io/truce/sitemap.xml
