@@ -1,4 +1,4 @@
-baseurl = "https://georgemac.github.io/truce/"
+baseurl = "https://docs.truce.dev/"
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true
