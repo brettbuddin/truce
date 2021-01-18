@@ -114,14 +114,53 @@ types:      # The type definitions of the Truce service being defined.
 
 The product of these three definition objects drives the generators to output scaffolding, API definitions and frameworks.
 
-#### Transports
+### Transports
 
+```cue
+transports:
+  <type>: # currently only "http" is supported as a transport target.
+```
+
+#### HTTP Transport
+
+```cue
+transports:
+  http:
+    versions: [string] # array of http version strings e.g. ["1.0", "1.1", "2.0"]
+    prefix: string     # prefix for all generated endpoints e.g. "/api/v1".
+    errors: {
+      <status>: {      # status code to defined type mapping for.
+        type: string   # reference to an error defined in "types" section.
+      }
+    }
+```
+
+### Functions
+
+```cue
+functions:
+  string:          # the name of the function defined as a string.
+    arguments:  [] # see function/arguments below.
+    return:     {} # see function/return below.
+    transports: {} # see function/transports below.
+```
+
+#### function/arguments
+TODO(georgemac)
+#### function/return
+TODO(georgemac)
+#### function/transports
 TODO(georgemac)
 
-#### Functions
+### Types
 
-TODO(georgemac)
-
-#### Types
-
-TODO(georgemac)
+```cue
+types:
+  string:                     # a string defining the types name.
+    type: *"struct" | "error" # a type of either "struct" or "error" (default "struct").
+    fields: {
+      string: {               # a string defining the fields name.
+        type: string          # a string definined the fields type.
+      }
+    }
+```
