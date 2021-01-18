@@ -1,7 +1,7 @@
 ---
-title: "Introduction"
-description: "Truce specification language."
-lead: "Truce specification language."
+title: "Overview"
+description: "Overview of the Truce specification language."
+lead: "Overview of the Truce specification language."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
