@@ -30,7 +30,7 @@ outputs: ... # Target output definitions.
 specifications: ... # Truce RPC specifications.
 ```
 
-### Outputs
+## Outputs
 
 The outputs declarations define which target specification should be generated into definitions for a particular platform.
 
@@ -38,8 +38,8 @@ It is structure like so:
 
 ```cue
 outputs:
-  specName:         # e.g. "userService"
-    specVersion:    # e.g. "3"
+  <name>:           # e.g. "userService"
+    <version>:      # e.g. "3"
       <outputType>: # e.g. go or openapi
 ```
 
@@ -48,7 +48,7 @@ Truce currently supports two sets of target generators:
 1. Go (types, client and servers).
 2. OpenAPI (swagger definition).
 
-#### Go
+### Go
 
 The Go output object expresses where to generate the struct definitions (types), http client and http server Go definitions separately.
 The type name `type` of each of the client and server can be overriden. Along with the package `pkg` in which to generate for all targets.
@@ -76,7 +76,7 @@ outputs:
         }
 ```
 
-#### OpenAPI
+### OpenAPI
 
 The OpenAPI output object expresses a location in which to output a target OpenAPI3 (swagger) json file.
 
@@ -92,17 +92,17 @@ outputs:
 ```
 
 
-### Specifications
+## Specifications
 
 The heart of Truce is nested beneath the `specifications` field. This is where RPC definitions are housed beneath a `name` and a `version`:
 
 ```cue
 specifications:
-  name:
-    version: { ... } # Specification object
+  <name>:
+    <version>: { ... } # Specification object
 ```
 
-#### Specification Object
+### Specification Object
 
 The specification object consists three top-level fields:
 
